@@ -59,12 +59,6 @@ def main():
     checkpoint_path = os.path.join('saved_models/classifier', model_filename)
     #checkpoint_path = "/home/corcasta/Documents/AI/Test_1/saved_models/classifier"
     
-    """
-    checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
-                                                             save_best_only=True,
-                                                             save_weights_only=False,
-                                                             verbose=1)
-    """
     checkpoint_callback = CustomCheckpoint(filepath=checkpoint_path,
                                            save_best_only=True,
                                            save_weights_only=False,
